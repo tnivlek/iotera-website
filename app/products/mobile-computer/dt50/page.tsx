@@ -24,52 +24,58 @@ export default function DT50Page() {
                 {/* Column 1 */}
                 <div className="flex flex-col items-center justify-center space-y-6">
                   <Image
-                    src="/ImagesContainer/Product/Mobile Computer/GMS.png"
+                    src="./ImagesContainer/Product/Mobile Computer/GMS.png"
                     alt="Google Mobile Service"
                     width={120}
                     height={40}
                     className="object-contain"
+                    unoptimized
                   />
                   <Image
-                    src="/ImagesContainer/Product/Mobile Computer/wifi.png"
+                    src="./ImagesContainer/Product/Mobile Computer/wifi.png"
                     alt="WiFi Certified"
                     width={120}
                     height={40}
                     className="object-contain"
+                    unoptimized
                   />
                 </div>
                 {/* Column 2 */}
                 <div className="flex flex-col items-center justify-center space-y-6">
                   <Image
-                    src="/ImagesContainer/Product/Mobile Computer/AER.png"
+                    src="./ImagesContainer/Product/Mobile Computer/AER.png"
                     alt="Android Enterprise"
                     width={120}
                     height={40}
                     className="object-contain"
+                    unoptimized
                   />
                   <Image
-                    src="/ImagesContainer/Product/Mobile Computer/SOTIMobiControl.png"
+                    src="./ImagesContainer/Product/Mobile Computer/SOTIMobiControl.png"
                     alt="SOTI"
                     width={120}
                     height={40}
                     className="object-contain"
+                    unoptimized
                   />
                 </div>
                 {/* Column 3 */}
                 <div className="flex flex-col items-center justify-center space-y-2">
                   <Image
-                    src="/ImagesContainer/Product/Mobile Computer/WorkspaceONEUEM.png"
+                    src="./ImagesContainer/Product/Mobile Computer/WorkspaceONEUEM.png"
                     alt="WorkspaceONE"
                     width={180}
                     height={60}
                     className="object-contain"
+                    unoptimized
                   />
                   <Image
-                    src="/ImagesContainer/Product/Mobile Computer/SafeUEM.png"
+                    src="./ImagesContainer/Product/Mobile Computer/SafeUEM.png"
                     alt="SafeUEM"
                     width={120}
                     height={40}
                     className="object-contain"
+                    unoptimized
                   />
                 </div>
               </div>
@@ -78,12 +84,13 @@ export default function DT50Page() {
             {/* Right Content - Product Image */}
             <div className="relative flex items-center justify-center">
               <Image
-                src="/ImagesContainer/Product/Mobile Computer/Urovo/dt50hht.png"
+                src="./ImagesContainer/Product/Mobile Computer/Urovo/dt50hht.png"
                 alt="DT50 Mobile Computer"
                 width={600}
                 height={800}
                 className="object-contain"
                 priority
+                unoptimized
               />
             </div>
           </div>
@@ -96,10 +103,11 @@ export default function DT50Page() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div className="relative h-[500px]">
               <Image
-                src="/ImagesContainer/Product/Mobile Computer/Urovo/DT50_1080x1080.png"
+                src="./ImagesContainer/Product/Mobile Computer/Urovo/DT50_1080x1080.png"
                 alt="DT50 Overview"
                 fill
                 className="object-contain"
+                unoptimized
               />
             </div>
             <div className="space-y-6">
@@ -159,10 +167,11 @@ export default function DT50Page() {
             {/* Right Content */}
             <div className="relative h-[600px]">
               <Image
-                src="/ImagesContainer/Product/Mobile Computer/Urovo/DT50_transmission.png"
+                src="./ImagesContainer/Product/Mobile Computer/Urovo/DT50_transmission.png"
                 alt="DT50 Multi-channel Transmission"
                 fill
                 className="object-contain"
+                unoptimized
               />
             </div>
           </div>
@@ -180,11 +189,12 @@ export default function DT50Page() {
             <div className="bg-white rounded-3xl p-4 aspect-square flex flex-col">
               <div className="relative flex-1 mb-4 h-[300px]">
                 <Image
-                  src="/ImagesContainer/Product/Mobile Computer/Urovo/Urovo-DT50-AdvanceScanner.png"
+                  src="./ImagesContainer/Product/Mobile Computer/Urovo/Urovo-DT50-AdvanceScanner.png"
                   alt="Advanced Scanner"
                   fill
                   className="object-contain scale-125"
                   priority
+                  unoptimized
                 />
               </div>
               <h3 className="text-2xl font-semibold text-[#1d1d1f] mb-2">

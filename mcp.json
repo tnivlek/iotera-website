@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "mcp-filesystem-server",
+      "args": [
+        "/Users/iatlek/Documents/GitHub/MCPFileSystem",
+        "/Users/iatlek/Documents/GitHub/MCPFileSystem/tools"
+      ]
+    }
+  }
+} 

@@ -1,12 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import GlobalHeader from '../../../components/GlobalHeader';
 
 export default function DT50Page() {
   return (
     <div className="bg-[#fbfbfd]">
-      <GlobalHeader />
-
       {/* Hero Section */}
       <section className="relative h-[80vh] bg-[#333333]">
         <div className="max-w-[1200px] mx-auto px-4 h-full">

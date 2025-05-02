@@ -1,12 +1,15 @@
-import type { Metadata } from "next"
-import "./globals.css"
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
 import ClientHeader from './components/ClientHeader'
 import Footer from './components/Footer'
 
+const inter = Inter({ subsets: ['latin'] })
+
 export const metadata: Metadata = {
-  title: "IOT-ERA | Innovative Solutions",
-  description: "Transform your business operations with IOT-ERA solutions",
-  generator: 'v0.dev'
+  title: 'Iotera',
+  description: 'Enterprise Solutions for Mobile Computing',
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0',
 }
 
 export default function RootLayout({
@@ -15,8 +18,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className="font-[-apple-system,BlinkMacSystemFont,'Segoe_UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica_Neue',sans-serif] bg-[#fbfbfd] text-[#1d1d1f] antialiased" suppressHydrationWarning>
+    <html lang="en" className="scroll-smooth">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+      </head>
+      <body className={`${inter.className} min-h-screen`}>
         <div className="min-h-screen flex flex-col pt-[46px]">
           <ClientHeader />
           {children}

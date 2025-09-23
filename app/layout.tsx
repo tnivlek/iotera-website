@@ -23,7 +23,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
       </head>
       <body className={`${inter.className} min-h-screen`}>
-        <div className="min-h-screen flex flex-col pt-[46px]">
+        <div className="min-h-screen flex flex-col pt-[60px]">
           <ClientHeader />
           {children}
           <Footer />

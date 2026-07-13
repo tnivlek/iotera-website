@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import ScrollButton from './ScrollButton';
+import HeroLearnMoreButton from './HeroLearnMoreButton';
 
 export default function Hero() {
   return (
@@ -13,13 +13,13 @@ export default function Hero() {
           <p className="text-[28px] text-[#86868b] mb-10 font-normal">
             Transform your business operations.
           </p>
-          <ScrollButton />
+          <HeroLearnMoreButton />
         </div>
       </div>
 
       <div className="h-8"></div>
 
-      <div id="products" className="max-w-[1200px] mx-auto px-4 pb-20 pt-20">
+      <div id="products" className="max-w-[1200px] mx-auto px-4 pb-20 pt-20 scroll-mt-[46px]">
         <h2 className="text-[40px] text-center font-semibold text-[#1d1d1f] mb-16">
           Which product is right for you?
         </h2>

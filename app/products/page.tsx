@@ -1,5 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { createPageMetadata } from '../lib/metadata';
+
+export const metadata = createPageMetadata({
+  title: 'Products',
+  description: 'Explore Iotera products including mobile computers, barcode scanners, RFID solutions, and EMM platforms.',
+  path: '/products',
+});
 
 export default function ProductsPage() {
   return (

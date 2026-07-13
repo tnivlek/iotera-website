@@ -1,9 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { useState } from 'react';
-import ProductDropdown from './ProductDropdown';
+import BrandLogo from './BrandLogo';
 
 export default function GlobalHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,16 +10,7 @@ export default function GlobalHeader() {
   return (
     <header className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
       <nav className="max-w-[1200px] mx-auto px-4 h-[46px] flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="flex items-center">
-          <Image
-            src="/ImagesContainer/IoteraLogoChoped.png"
-            alt="Iotera Logo"
-            width={100}
-            height={30}
-            className="object-contain"
-          />
-        </Link>
+        <BrandLogo priority />
 
         {/* Mobile Menu Button */}
         <button 

@@ -1,3 +1,12 @@
+import { createPageMetadata } from "../lib/metadata"
+
+export const metadata = createPageMetadata({
+  title: "Contact",
+  description:
+    "Contact Iotera for product enquiries, technical support, and enterprise mobile computing solutions in Hong Kong.",
+  path: "/contact",
+})
+
 export default function ContactPage() {
   return (
     <main className="flex-1">

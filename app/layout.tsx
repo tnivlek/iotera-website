@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} min-h-screen`}>
-        <div className="min-h-screen flex flex-col pt-[46px]">
+        <div className="min-h-screen flex flex-col pt-[60px]">
           <ClientHeader />
           {children}
           <Footer />

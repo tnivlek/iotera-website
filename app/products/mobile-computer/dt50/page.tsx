@@ -9,73 +9,55 @@ export const metadata = createPageMetadata({
   path: '/products/mobile-computer/dt50',
 });
 
+interface CertificationLogo {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+}
+
+const LOGO_DIR = '/ImagesContainer/Product/Mobile Computer';
+
+// width/height must match the trimmed image files: they drive equal-area sizing.
+const CERTIFICATION_LOGOS: readonly CertificationLogo[] = [
+  { src: `${LOGO_DIR}/GMS_Dark.png`, alt: 'Google Mobile Services', width: 101, height: 45 },
+  { src: `${LOGO_DIR}/AER_Dark.png`, alt: 'Android Enterprise Recommended', width: 149, height: 43 },
+  { src: `${LOGO_DIR}/Omnissa.png`, alt: 'Omnissa Workspace ONE UEM', width: 1200, height: 223 },
+  { src: `${LOGO_DIR}/wifi_Dark.png`, alt: 'Wi-Fi Certified', width: 227, height: 137 },
+  { src: `${LOGO_DIR}/SOTIMobiControl_Dark.png`, alt: 'SOTI MobiControl Certified', width: 156, height: 36 },
+  { src: `${LOGO_DIR}/SafeUEM_Logo.png`, alt: 'SafeUEM', width: 600, height: 398 },
+];
+
 export default function DT50Page() {
   return (
     <div className="bg-[#fbfbfd]">
       <MobileComputerSubNav active="dt50" />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen sm:h-[92vh] bg-[#333333]">
+      <section className="relative min-h-screen sm:h-[92vh] bg-[#f5f5f7]">
         <div className="max-w-[1380px] mx-auto px-5 sm:px-7 h-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-9 lg:gap-14 h-full py-9 sm:py-14">
             {/* Left Content */}
             <div className="flex flex-col justify-center order-2 lg:order-1 text-center lg:text-left">
-              <h1 className="text-[37px] sm:text-[46px] lg:text-[64px] font-bold text-white mb-5 leading-tight">
+              <h1 className="text-[37px] sm:text-[46px] lg:text-[64px] font-bold text-[#1d1d1f] mb-5 leading-tight">
                 UROVO DT50
               </h1>
-              <p className="text-[21px] sm:text-[28px] lg:text-[37px] text-white/90 mb-9 sm:mb-14">
+              <p className="text-[21px] sm:text-[28px] lg:text-[37px] text-[#1d1d1f]/90 mb-9 sm:mb-14">
                 With DT50, anything is possible
               </p>
               {/* Certification Logos */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-5 sm:gap-7 lg:gap-9 mt-7 sm:mt-9">
-                <div className="flex flex-col items-center justify-center space-y-4 sm:space-y-5 lg:space-y-7">
+              <div className="grid grid-cols-2 sm:grid-cols-3 items-center justify-items-center gap-x-5 gap-y-6 sm:gap-x-7 lg:gap-x-9 lg:gap-y-8 mt-7 sm:mt-9 [--logo-scale:44px] sm:[--logo-scale:52px] lg:[--logo-scale:60px]">
+                {CERTIFICATION_LOGOS.map((logo) => (
                   <Image
-                    src="/ImagesContainer/Product/Mobile Computer/GMS.png"
-                    alt="Google Mobile Service"
-                    width={92}
-                    height={31}
-                    className="object-contain w-18 h-6 sm:w-23 sm:h-8 lg:w-28 lg:h-9"
+                    key={logo.src}
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={logo.width}
+                    height={logo.height}
+                    className="w-auto object-contain"
+                    style={{ height: `calc(var(--logo-scale) * ${Math.sqrt(logo.height / logo.width).toFixed(3)})` }}
                   />
-                  <Image
-                    src="/ImagesContainer/Product/Mobile Computer/wifi.png"
-                    alt="WiFi Certified"
-                    width={92}
-                    height={31}
-                    className="object-contain w-18 h-6 sm:w-23 sm:h-8 lg:w-28 lg:h-9"
-                  />
-                </div>
-                <div className="flex flex-col items-center justify-center space-y-4 sm:space-y-5 lg:space-y-7">
-                  <Image
-                    src="/ImagesContainer/Product/Mobile Computer/AER.png"
-                    alt="Android Enterprise"
-                    width={92}
-                    height={31}
-                    className="object-contain w-18 h-6 sm:w-23 sm:h-8 lg:w-28 lg:h-9"
-                  />
-                  <Image
-                    src="/ImagesContainer/Product/Mobile Computer/SOTIMobiControl.png"
-                    alt="SOTI"
-                    width={92}
-                    height={31}
-                    className="object-contain w-18 h-6 sm:w-23 sm:h-8 lg:w-28 lg:h-9"
-                  />
-                </div>
-                <div className="flex flex-col items-center justify-center space-y-3 sm:space-y-4 lg:space-y-5 col-span-2 sm:col-span-1">
-                  <Image
-                    src="/ImagesContainer/Product/Mobile Computer/WorkspaceONEUEM.png"
-                    alt="WorkspaceONE"
-                    width={171}
-                    height={49}
-                    className="object-contain w-32 h-9 sm:w-37 sm:h-12 lg:w-41 lg:h-14"
-                  />
-                  <Image
-                    src="/ImagesContainer/Product/Mobile Computer/SafeUEM_Outlined.png"
-                    alt="SafeUEM"
-                    width={212}
-                    height={70}
-                    className="object-contain w-37 h-13 sm:w-41 sm:h-14 lg:w-51 lg:h-18"
-                  />
-                </div>
+                ))}
               </div>
             </div>
 

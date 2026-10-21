@@ -22,12 +22,11 @@ export default function MobileComputerSubNav({ active }: MobileComputerSubNavPro
                 items={[{ name: 'DT50', href: '/products/mobile-computer/dt50' }]}
                 isActive={active === 'dt50'}
               />
-              <Link
-                href="/products/mobile-computer/idata"
-                className={linkClass(active === 'idata')}
-              >
-                iData
-              </Link>
+              <ProductDropdown
+                label="iData"
+                items={[{ name: 'T5', href: '/products/mobile-computer/idata/t5' }]}
+                isActive={active === 'idata'}
+              />
               <Link
                 href="/products/mobile-computer/newland"
                 className={`${linkClass(active === 'newland')} whitespace-nowrap`}

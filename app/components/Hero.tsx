@@ -131,6 +131,33 @@ export default function Hero() {
               </Link>
             </div>
           </div>
+
+          {/* Service and Repair */}
+          <div className="text-center flex flex-col h-full md:col-span-2 md:w-[calc(50%-1rem)] md:justify-self-center lg:col-span-4 lg:w-[calc(25%-1.5rem)]">
+            <div className="h-[180px] relative mb-6 flex items-center justify-center w-full">
+              <Image
+                src="/Images/RepairService.png"
+                alt="Repair Service"
+                width={570}
+                height={424}
+                className="object-contain w-auto h-auto max-h-[160px]"
+              />
+            </div>
+            <h3 className="text-2xl font-semibold text-[#1d1d1f] mb-4">Service and Repair</h3>
+            <p className="text-[#86868b] mb-6 flex-grow">
+              Maintain operational continuity with our professional, certified repair and support services. As an authorised service and repair centre, we provide reliable diagnostics and maintenance. Empower your business with certified technical expertise to ensure your enterprise hardware always performs at peak levels.
+            </p>
+            <div>
+              <Link
+                href="/service-and-repair"
+                className="inline-flex items-center justify-center px-8 py-3.5 rounded-full 
+                bg-[#e8e8ed] text-[#1d1d1f] text-[17px] font-normal hover:bg-[#d2d2d7] transition-colors
+                min-w-[140px]"
+              >
+                Learn more
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
 
